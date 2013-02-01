@@ -28,6 +28,30 @@ class mysql {
   
 }
 
+class python {
+  package {
+    "python":
+      ensure  => present;
+
+    "python-pip":
+      ensure  => present;
+
+    "ipython":
+      ensure   => present,
+      provider => 'pip',
+      require  => Package["python-pip"];
+  }
+}
+
+class ruby {
+  package {
+    "rails":
+      ensure  => present,
+      provider => 'gem';
+  }
+}
 
 include tools
 include mysql
+include python
+include ruby
