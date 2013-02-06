@@ -1,5 +1,5 @@
 class tools {
-  package { [ "git" ]:
+  package { [ "git", "tmux", "curl", "sqlite3" ]:
     ensure => present,
   }
 }
@@ -28,6 +28,13 @@ class mysql {
   
 }
 
+class support {
+  package {
+    [ "libsqlite3-dev", "libxml2-dev", "libxslt1-dev", "libpq5", "libpq-dev", "nodejs" ]:
+      ensure  => present,
+  }
+}
+
 class python {
   package {
     "python":
@@ -53,5 +60,6 @@ class ruby {
 
 include tools
 include mysql
+include support
 include python
 include ruby
