@@ -58,8 +58,28 @@ class ruby {
   }
 }
 
+class home {
+  file {
+    ".tmux.conf":
+      mode => 0664,
+      path => '/home/vagrant/.tmux.conf',
+      source => '/vagrant/home/.tmux.conf';
+
+    ".vimrc":
+      mode => 0664,
+      path => '/home/vagrant/.vimrc',
+      source => '/vagrant/home/.vimrc';
+
+    ".vim":
+      mode => 0755,
+      path => '/home/vagrant/.vim',
+      source => '/vagrant/home/.vim';
+  }
+}
+
 include tools
 include mysql
 include support
 include python
 include ruby
+include home
