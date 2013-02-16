@@ -74,6 +74,11 @@ class home {
       mode => 0755,
       path => '/home/vagrant/.vim',
       source => '/vagrant/home/.vim';
+
+    ".gitconfig":
+      mode => 0664,
+      path => '/home/vagrant/.gitconfig',
+      source => '/vagrant/home/.gitconfig';
   }
 }
 
