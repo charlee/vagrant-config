@@ -47,6 +47,11 @@ class python {
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
+    
+    "django":
+      ensure   => present,
+      provider => 'pip',
+      require  => Package["python-pip"];
   }
 }
 
