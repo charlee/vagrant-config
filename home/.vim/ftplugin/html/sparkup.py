@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-version = "0.1.3"
+on = "0.1.3"
 
 import os
 import fileinput
