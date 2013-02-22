@@ -7,3 +7,5 @@ set nu
 set ai
 set hls
 set is
+
+filetype plugin on
