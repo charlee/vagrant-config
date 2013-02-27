@@ -52,6 +52,11 @@ class python {
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
+
+    "Mako":
+      ensure   => present,
+      provider => 'pip',
+      require  => Package['python-pip'];
   }
 }
 
