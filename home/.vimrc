@@ -7,5 +7,6 @@ set nu
 set ai
 set hls
 set is
+set nowrap
 
 filetype plugin on
