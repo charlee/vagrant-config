@@ -43,20 +43,18 @@ class python {
     "python-pip":
       ensure  => present;
 
-    "ipython":
-      ensure   => present,
-      provider => 'pip',
-      require  => Package["python-pip"];
-    
-    "django":
+    "python-dev":
+      ensure  => present;
+
+    [ "ipython", "django", "Mako" ]:
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
 
-    "Mako":
+    "py-bcrypt":
       ensure   => present,
       provider => 'pip',
-      require  => Package['python-pip'];
+      require  => [ Package["python-pip"], Package["python-dev"] ];
   }
 }
 
