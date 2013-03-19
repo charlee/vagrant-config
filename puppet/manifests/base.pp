@@ -1,5 +1,5 @@
 class tools {
-  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip" ]:
+  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip", "mercurial" ]:
     ensure => present,
   }
 }

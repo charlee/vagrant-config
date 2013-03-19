@@ -8,5 +8,6 @@ set ai
 set hls
 set is
 set nowrap
+set modeline
 
 filetype plugin on
