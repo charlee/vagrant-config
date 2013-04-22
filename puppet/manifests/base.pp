@@ -46,7 +46,7 @@ class python {
     "python-dev":
       ensure  => present;
 
-    [ "ipython", "django", "Mako" ]:
+    [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask" ]:
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
