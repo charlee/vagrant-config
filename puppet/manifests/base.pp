@@ -1,5 +1,5 @@
 class tools {
-  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip", "mercurial", "ack" ]:
+  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip", "mercurial", "ack", "memcached" ]:
     ensure => present,
   }
 }
@@ -46,7 +46,7 @@ class python {
     "python-dev":
       ensure  => present;
 
-    [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask", "jinja2", "coffin", "lxml" ]:
+    [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask", "jinja2", "coffin", "lxml", "dj-database-url", "python-memcached" ]:
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
