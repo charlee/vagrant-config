@@ -46,6 +46,9 @@ class python {
     "python-dev":
       ensure  => present;
 
+    "python-mysqldb":
+      ensure  => present;
+
     [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask", "jinja2", "coffin", "lxml", "dj-database-url", "python-memcached" ]:
       ensure   => present,
       provider => 'pip',
