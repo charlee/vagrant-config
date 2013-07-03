@@ -1,5 +1,5 @@
 class tools {
-  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip", "mercurial", "ack", "memcached" ]:
+  package { [ "git", "tmux", "curl", "sqlite3", "zip", "unzip", "mercurial", "ack", "memcached", "redis-server" ]:
     ensure => present,
   }
 }
@@ -49,7 +49,7 @@ class python {
     "python-mysqldb":
       ensure  => present;
 
-    [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask", "jinja2", "coffin", "lxml", "dj-database-url", "python-memcached" ]:
+    [ "ipython", "django", "Mako", "Pillow", "numpy", "Flask", "jinja2", "coffin", "lxml", "dj-database-url", "python-memcached", "redis", "Flask-Scss", "pyScss", "flask-csrf", "Flask-Bcrypt" ]:
       ensure   => present,
       provider => 'pip',
       require  => Package["python-pip"];
