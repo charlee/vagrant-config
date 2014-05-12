@@ -5,6 +5,21 @@ class tools {
 }
 
 
+class apache_php {
+
+  package { 
+    [ "apache2", "libapache2-mod-php5", "php5", "php5-mysql" ]:
+      ensure  => present;
+  }
+
+  service {
+    "apache2":
+      ensure  => running,
+      require => Package["apache2"],
+  }
+
+}
+
 class mysql {
   exec { "update-package-list":
     command => "/usr/bin/apt-get update",
@@ -94,8 +109,8 @@ class home {
 }
 
 include tools
+include apache_php
 include mysql
 include support
 include python
-include ruby
 include home

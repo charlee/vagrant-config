@@ -7,8 +7,8 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "base"
-  config.vm.box_url = "https://s3-sa-east-1.amazonaws.com/willian-boxes/Ubuntu-Server-12.10-amd64-Minimal.box"
+  config.vm.box = "ubuntu1304x64"
+  config.vm.box_url = "http://goo.gl/Y4aRr"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -31,8 +31,6 @@ Vagrant::Config.run do |config|
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
   config.vm.forward_port 80, 8080
-  config.vm.forward_port 3000, 3000
-  config.vm.forward_port 5000, 5000
   config.vm.forward_port 8000, 8000
 
   # Share an additional folder to the guest VM. The first argument is
